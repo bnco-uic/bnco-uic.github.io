@@ -65,8 +65,51 @@
             color: #f4a8b1;
             font-family: 'Lora', serif;
         }
-        
-        footer {
+
+        .division {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .link {
+            font-size: 1.2rem;
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .link:hover {
+            color: #fff;
+        }
+
+        .facebook {
+            background-color: #b3cde0; /* Light pastel blue */
+        }
+
+        .facebook:hover {
+            background-color: #9ab2c0;
+        }
+
+        .instagram {
+            background-color: #f7c6c7; /* Light pastel pink */
+        }
+
+        .instagram:hover {
+            background-color: #f5a9a6;
+        }
+
+        .blog {
+            background-color: #f3e5ab; /* Light pastel yellow */
+        }
+
+        .blog:hover {
+            background-color: #f1d7a5;
+        }
+
+        .footer {
             background-color: #333; 
             color: #fff;
             text-align: center;
@@ -74,8 +117,17 @@
             width: 100%;
         }
         
-        footer p {
+        .footer p {
             margin: 0;
+        }
+
+        a {
+            color: #f4a8b1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -106,17 +158,10 @@
             <h2>Talents</h2>  
             <p> Now, the hardest question of all: What is my talent? Sadly, I don’t excel in any specific area. I can’t dance gracefully or sing beautifully, and I haven’t found a sport I’m passionate about. However, I believe my talent is still out there waiting to be discovered; maybe we just got lost in translation (char haha). We will meet someday, like a serendipity. Manifesting! </p>
         </section>
-
-        <section id="Social Links">
-            <h2>Social Links</h2>  
-            <a href="https://www.facebook.com/iambiabnca/" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/iambiabnca/" target="_blank">Instagram</a>
-            <a href="https://bnco-uic.github.io/html/fashionblog/index.html" target="_blank">Fashion Blog</a>
-        </section>
         
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; Bianca Noreene Calza Otara 2024</p>
     </footer>
 </body>
