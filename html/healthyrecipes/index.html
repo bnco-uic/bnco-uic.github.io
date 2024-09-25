@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffe2ef;
+            color: rgb(75, 75, 75); 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Lora', serif;
+        }
+
+        main {
+            padding: 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            height: 150px;
+            border-radius: 8px; /* Rounded corners to match the style */
+        }
+
+        .description {
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+
+        #cook-time {
+            font-weight: bold;
+        }
+
+        .ingredients {
+            list-style: square;
+            padding-left: 20px; /* Padding to align with the rest of the text */
+        }
+
+        p.time {
+            color: gray;
+        }
+
+        .citation .external-link {
+            color: SeaGreen;
+        }
+
+        section {
+            background-color: #ffffff; 
+            padding: 2rem;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: justify;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #f4a8b1; 
+            padding-bottom: .5rem;
+            margin-bottom: 1.5rem;
+            color: #f4a8b1;
+            font-family: 'Lora', serif;
+        }
+
+        a {
+            color: #f4a8b1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kale Caesar Quinoa Salad Recipe</h1>
+    </header>
+
+    <main>
+        <img src="https://content.codecademy.com/courses/freelance-1/unit-2/salad.jpg" alt="Kale Caesar Salad">
+        <p class="description">Kale and quinoa provide a healthy base for roasted chicken topped with a light Caesar sauce.</p>
+        <p id="cook-time">Total time: 45 minutes</p>
+
+        <section>
+            <h2>Ingredients</h2>
+            <ul class="ingredients">
+                <li>1/4 cup kale</li>
+                <li>1 cup Quinoa</li>
+                <li>2 tbsp Olive Oil</li>
+                <li>1 chicken breast</li>
+                <li>Caesar Dressing</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Preparation</h2>
+            <ol>
+                <li>
+                    <p>Prepare quinoa and roast chicken until golden brown and 165 in middle.</p>
+                    <p class="time">Time: 40 minutes</p>
+                </li>
+                <li>
+                    <p>Toss quinoa, chicken, kale, and Caesar dressing until coated.</p>
+                    <p class="time">Time: 4 minutes</p>
+                </li>
+                <li>
+                    <p>Add walnuts and olive oil as garnish.</p>
+                    <p class="time">Time: 1 minute</p>
+                </li>
+            </ol>
+        </section>
+        <a href="https://bnco-uic.github.io/">Back to Main Page</a>
+        <p class="citation">Find this recipe and more <a href="http://www.myrecipes.com/recipe/kale-caesar-salad-chicken" target="_blank" class="external-link">here</a>.</p>
+    </main>
+</body>
+</html>
