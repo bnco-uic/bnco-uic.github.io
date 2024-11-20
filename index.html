@@ -4,167 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #ffe2ef; 
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            color: rgb(75, 75, 75); 
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            font-size: 18px;
-        }
-        
-        header {
-            background-color: #333; 
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        h1 {
-            margin: 0;
-            font-family: 'Lora', serif;
-        }
-        
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px; 
-        }
-        
-        .profile {
-            border-radius: 50%;
-            margin-bottom: .5rem; 
-            width: 200px;
-            height: 200px; 
-            object-fit: cover; 
-        }
-        
-        section {
-            background-color: #ffffff; 
-            padding: 2rem;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-            text-align: justify;
-        }
-        
-        section h2 {
-            border-bottom: 2px solid #f4a8b1; 
-            padding-bottom: .5rem;
-            margin-bottom: 1.5rem;
-            color: #f4a8b1;
-            font-family: 'Lora', serif;
-        }
-
-        .division {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .link {
-            font-size: 1.2rem;
-            color: #333;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .link:hover {
-            color: #fff;
-        }
-
-        .facebook {
-            background-color: #b3cde0; 
-        }
-
-        .facebook:hover {
-            background-color: #9ab2c0;
-        }
-
-        .instagram {
-            background-color: #f7c6c7;
-        }
-
-        .instagram:hover {
-            background-color: #f5a9a6;
-        }
-
-        .blog {
-            background-color: #f3e5ab; 
-        }
-
-        .blog:hover {
-            background-color: #f1d7a5;
-        }
-
-        .healthy {
-            background-color: #cce7d0;
-        }
-
-        .healthy:hover {
-            background-color: #b3e2b8; 
-        }
-
-        .footer {
-            background-color: #333; 
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            width: 100%;
-        }
-        
-        .footer p {
-            margin: 0;
-        }
-
-        a {
-            color: #f4a8b1;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <h1>My Portfolio</h1>
+        <button id="toggleBtn">☀︎</button>
     </header>
 
     <main>
+
         <img src="Bianca.jpg" alt="Bianca" class="profile">
-        
-        <section id="AboutMe">
+
+        <section id="about-me">
             <h2>About Me</h2>
-            <p>Hi! Good day. I am Bianca Noreene Calza Otara, and I am currently pursuing a Bachelor of Science in Information Technology at the University of the Immaculate Conception. I am now in my second year. Yay!</p>
+            <p>
+                Hi! I am Bianca Noreene Calza Otara, a second-year Bachelor of Science in Information Technology student 
+                at the University of the Immaculate Conception. I enjoy programming and look forward to developing my skills further!
+            </p>
         </section>
 
-        <section id="Favorites">
+        <section id="quote-container">
+            <h2>Favorite Quote</h2>
+            <p>Quote...</p>
+        </section>
+
+        <section id="favorites">
             <h2>Favorites</h2>
-            <p> When we talk about favorites, there’s so much to mention! Let’s start with my favorite comfort food—ice cream! I’m sure many would agree. It’s my go-to, along with lechon. As for soup, Nilagang Ribs is top tier with those crunchy white bones (shocksss I absolutely love it). When I’m bored and have nothing to do, watching movies is my go-to. Whether it’s a K-drama or any genre, I enjoy movies that make me cry. So, if you have any must-watch films, don’t keep them to yourself—please share! Mwahhhh. </p>
+            <p>
+                My favorite comfort foods include ice cream and lechon. I also love watching movies that make me cry—feel free to share your recommendations!
+            </p>
         </section>
 
-        <section id="SchoolProjects">
+        <section id="school-projects">
             <h2>School Projects</h2>
-            <p> During my first year as a Bachelor of Science in Information Technology, the most memorable and notable school project I completed was our project in Computer Programming 2. We developed a banking account system using NetBeans and designed it ourselves. Through this project, I learned more about how databases work and their importance, and I’m excited to learn more. I’m looking forward to gaining more knowledge and growing as a programmer. Fighting! </p>
+            <p>
+                One of my most memorable projects was creating a banking account system during my first year of IT studies. 
+                This project taught me about databases and their importance.
+            </p>
         </section>
 
-        <section id="Talents">
-            <h2>Talents</h2>  
-            <p> Now, the hardest question of all: What is my talent? Sadly, I don’t excel in any specific area. I can’t dance gracefully or sing beautifully, and I haven’t found a sport I’m passionate about. However, I believe my talent is still out there waiting to be discovered; maybe we just got lost in translation (char haha). We will meet someday, like a serendipity. Manifesting! </p>
+        <section id="talents">
+            <h2>Talents</h2>
+            <p>
+                I am still discovering my hidden talents! Stay tuned as I continue exploring and learning new things.
+            </p>
         </section>
 
         <section id="HTMLActivities">
@@ -183,18 +67,32 @@
             </div>
         </section>
 
-        <section id="SocialLinks">
-            <h2>Social Links</h2>  
-            <div class="division">
-                <a href="https://www.facebook.com/iambiabnca/" target="_blank" class="link facebook">Facebook</a>
-                <a href="https://www.instagram.com/iambiabnca/" target="_blank" class="link instagram">Instagram</a>
+        <section id="card-contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out via email or social media!</p>
+            <div>
+                <a href="https://www.facebook.com/iambiabnca/" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/iambiabnca/" target="_blank">Instagram</a>
             </div>
         </section>
-        
+
     </main>
 
-    <footer class="footer">
+    <footer>
         <p>&copy; Bianca Noreene Calza Otara 2024</p>
     </footer>
+
+    <script>
+        const toggleBtn = document.getElementById("toggleBtn");
+        let isDarkMode = false;
+
+            toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode", !isDarkMode);  
+            document.body.classList.toggle("light-mode", isDarkMode);  
+            isDarkMode = !isDarkMode;  
+        toggleBtn.textContent = isDarkMode ? "☾" : "☀︎";  
+            });
+      </script>
+
 </body>
 </html>
