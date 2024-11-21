@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="https://bnco-uic.github.io/">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="#school-projects">Event</a></li>
+            <li><a href="#favorites">Favorites</a></li>
+            <li><a href="#card-contact">Contact</a></li>
+        </ul>
+        <button id="toggleBtn">☀︎</button>
+    </nav>
+
     <header id="home">
         <h1>My Portfolio</h1>
-        <button id="toggleBtn">☀︎</button>
     </header>
 
     <main>
-
-        <img src="Bianca.jpg" alt="Bianca" class="profile">
-
         <section id="about-me">
             <h2>About Me</h2>
             <p>
@@ -24,17 +33,7 @@
             </p>
         </section>
 
-        <section id="quote-container">
-            <h2>Favorite Quote</h2>
-            <p>Quote...</p>
-        </section>
-
-        <section id="favorites">
-            <h2>Favorites</h2>
-            <p>
-                My favorite comfort foods include ice cream and lechon. I also love watching movies that make me cry—feel free to share your recommendations!
-            </p>
-        </section>
+        <!-- Added the favorite-category section -->
 
         <section id="school-projects">
             <h2>School Projects</h2>
@@ -44,57 +43,43 @@
             </p>
         </section>
 
-        <section id="talents">
-            <h2>Talents</h2>
-            <p>
-                I am still discovering my hidden talents! Stay tuned as I continue exploring and learning new things.
-            </p>
-        </section>
-
-        <section id="HTMLActivities">
-            <h2>HTML Activities</h2>  
-            <div class="division">
-                <a href="https://bnco-uic.github.io/html/fashionblog/index.html" target="_blank" class="link blog">Fashion Blog</a>
-                <a href="https://bnco-uic.github.io/html/healthyrecipes/index.html" target="_blank" class="link healthy">Healthy Recipe</a> 
+    <section id="favorites">
+        <h2>Favorite Song</h2>
+            <p>Kahit Maputi na ang Buhok ko</p>
+            <div class="audio-player">
+                <audio controls aria-label="Audio player for Song"> 
+                    <source src="song.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="CSSActivities">
-            <h2>CSS Activities</h2>  
-            <div class="division">
-                <a href="https://bnco-uic.github.io/activities/css/WoodruffPortfolio/index.html" target="_blank" class="link facebook">Woodruff Portfolio</a>
-                <a href="https://bnco-uic.github.io/activities/css/MediaQuery/index.html" target="_blank" class="link facebook">Media Query</a>
-            </div>
-        </section>
+    <section id="card-contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via email or social media!</p>
+        <div>
+            <a href="https://www.facebook.com/iambiabnca/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/iambiabnca/" target="_blank">Instagram</a>
+        </div>
+    </section>
 
-        <section id="card-contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out via email or social media!</p>
-            <div>
-                <a href="https://www.facebook.com/iambiabnca/" target="_blank">Facebook</a> |
-                <a href="https://www.instagram.com/iambiabnca/" target="_blank">Instagram</a>
-            </div>
-        </section>
-
-    </main>
+</main>
 
     <footer>
-        <center>
         <p>&copy; Bianca Noreene Calza Otara 2024</p>
-        </center>
     </footer>
 
     <script>
         const toggleBtn = document.getElementById("toggleBtn");
         let isDarkMode = false;
 
-            toggleBtn.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode", !isDarkMode);  
-            document.body.classList.toggle("light-mode", isDarkMode);  
-            isDarkMode = !isDarkMode;  
-        toggleBtn.textContent = isDarkMode ? "☾" : "☀︎";  
-            });
-      </script>
-
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode", !isDarkMode);
+            document.body.classList.toggle("light-mode", isDarkMode);
+            isDarkMode = !isDarkMode;
+            toggleBtn.textContent = isDarkMode ? "☾" : "☀︎";
+        });
+    </script>
 </body>
 </html>

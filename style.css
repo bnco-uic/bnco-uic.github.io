@@ -1,158 +1,227 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap');
+
+/* General Styling */
 body {
     font-family: 'Open Sans', sans-serif;
-    background: url('BG.jpg') no-repeat center center fixed; 
-    background-size: cover; 
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    color: rgb(75, 75, 75); 
+    background: url('BG.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(75, 75, 75);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    font-size: 18px;
-    transition: background-color 0.3s, color 0.3s; 
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+    color: #f4a8b1;
+}
+
+.register-btn {
+    background-color: #f4a8b1;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.register-btn:hover {
+    background-color: #ff5c8d;
+}
+
+#toggleBtn {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#toggleBtn:hover {
+    color: #f4a8b1;
 }
 
 header {
-    background-color: rgba(51, 51, 51, 0.8); 
-    color: #fff;
     text-align: center;
-    padding: 2rem 0;
-}
-
-h1 {
-    margin: 0;
+    padding: 4rem 1rem;
+    background-color: #333;
+    color: #fff;
     font-family: 'Lora', serif;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px; 
-}
-
-.profile {
-    border-radius: 50%;
-    margin-bottom: 1rem; 
-    width: 200px;
-    height: 200px; 
-    object-fit: cover; 
+    padding: 2rem;
 }
 
 section {
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 2rem;
-    margin: 20px;
+    margin: 1.5rem auto;
+    max-width: 800px;
     border-radius: 8px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    max-width: 600px;
-    width: 100%;
-    text-align: justify;
-    transition: background-color 0.3s, color 0.3s; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Open Sans', sans-serif;
 }
 
 section h2 {
-    border-bottom: 2px solid #f4a8b1; 
-    padding-bottom: .5rem;
-    margin-bottom: 1.5rem;
     color: #f4a8b1;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f4a8b1;
+    padding-bottom: 0.5rem;
     font-family: 'Lora', serif;
 }
 
-.division {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.link {
-    font-size: 1.2rem;
-    color: #333;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.link:hover {
-    color: #fff;
-}
-
-.facebook {
-    background-color: #b3cde0; 
-}
-
-.instagram {
-    background-color: #f7c6c7;
-}
-
-.footer {
-    background-color: rgba(51, 51, 51, 0.8); 
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    width: 100%;
-}
-
-/* Light mode styles */
-body.light-mode {
-    background-color: #fff;
-    color: #000;
-}
-
-body.light-mode header {
-    background-color: rgba(51, 51, 51, 0.8); 
-    color: #fff;
-}
-
-body.light-mode section {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #000;
-}
-
-body.light-mode .link {
-    color: black;
-}
-
-body.light-mode .link:hover {
-    color: rgb(255, 192, 243);
-}
-
-/* Dark mode styles */
+/* Dark Mode */
 body.dark-mode {
-    background: none;
-    background-color: #282828;  
-    color: #000000;  
+    background: url('dark-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+body.dark-mode nav {
+    background-color: #000;
+}
+
+body.dark-mode a {
+    color: #fff;
+}
+
+body.dark-mode a:hover {
+    color: #ff5c8d;
+}
+
+body.dark-mode .register-btn {
+    background-color: #8b1e2f;
 }
 
 body.dark-mode header {
-    background-color: #333;
+    background-color: #222;
 }
 
 body.dark-mode section {
-    background-color: rgba(30, 30, 30, 0.8); 
+    background-color: #222;
     color: #fff;
 }
 
-body.dark-mode section h2 {
-    border-bottom: 2px solid #f2ccd1; 
-    padding-bottom: .5rem;
-    margin-bottom: 1.5rem;
-    color: #f2ccd1;
-    font-family: 'Lora', serif;
+/* Favorites Section Styling */
+.favorites {
+    min-height: auto;
+    padding-bottom: 7rem;
 }
 
-body.dark-mode .link {
-    background-color: #8b1e2f; 
-    color: #fff;  
+.favorites .favorites-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-body.dark-mode .link:hover {
-    background-color: #ff5c8d;
+.favorites-container .favorites-box {
+    flex: 1 1 30rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-top: 0.6rem solid #f4a8b1;
+    border-bottom: 0.6rem solid #f4a8b1;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    height: 25rem; /* Fixed height for equal box sizes */
 }
 
-body.dark-mode footer {
-    background-color: #333;  
+.favorites-container .favorites-box:hover {
+    box-shadow: 0 .1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.favorites-box i {
+    font-size: 7rem;
+    color: #f4a8b1;
+}
+
+.favorites-box h3 {
+    font-size: 2.6rem;
+    transition: 0.5s ease;
+}
+
+.favorites-box:hover h3 {
+    color: #f4a8b1;
+}
+
+.favorites-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.favorites-box .btn {
+    text-decoration: none;
+    background: #f4a8b1;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.favorites-box .btn:hover {
+    background: #ff5c8d;
+}
+
+/* Ensuring images fit well within the box */
+.favorites-box img {
+    width: 100%;
+    height: auto;
+    max-height: 15rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Label Styling */
+.favorite-label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for labels */
+.favorites-box:hover .favorite-label {
+    color: #f4a8b1; /* Change label color on hover */
 }
