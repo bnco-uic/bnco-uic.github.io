@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Bianca Noreene Calza Otara - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <nav>
         <ul>
             <li><a href="https://bnco-uic.github.io/">Home</a></li>
@@ -18,54 +17,63 @@
     </nav>
 
     <header id="home">
-        <h1>My Portfolio</h1>
+        <h1>Bianca Noreene Calza Otara</h1>
+        <p>Portfolio - Web Developer & IT Enthusiast</p>
     </header>
 
     <main>
+        
+        <img src="Bianca.jpg" alt="Bianca" class="profile">
+    
+
+        <section id="about-me">
+            <p>
         <section id="about-me">
             <h2>About Me</h2>
-            <p>
-                Hi! I am Bianca Noreene Calza Otara, a second-year Bachelor of Science in Information Technology student 
-                at the University of the Immaculate Conception. I enjoy programming and look forward to developing my skills further!
-            </p>
+            <p>Hi! I am Bianca Noreene Calza Otara, a second-year Bachelor of Science in Information Technology student at the University of the Immaculate Conception. I enjoy programming and look forward to developing my skills further!</p>
         </section>
 
         <section id="school-projects">
             <h2>School Projects</h2>
-            <p>
-                One of my most memorable projects was creating a banking account system during my first year of IT studies. 
-                This project taught me about databases and their importance.
-            </p>
+            <p>One of my most memorable projects was creating a banking account system during my first year of IT studies. This project taught me about databases and their importance.</p>
         </section>
 
-    <section id="favorites">
-        <h2>Favorite Song</h2>
-            <p>Kahit Maputi na ang Buhok ko</p>
+        <section id="quote-of-the-day">
+            <h2>Quote of the Day</h2>
+            <p id="quote-text">Loading quote...</p>
+        </section>
+
+        <section id="favorites">
+            <h2>Favorite Song</h2>
+            <p><em>"Kahit Maputi na ang Buhok ko"</em></p>
             <div class="audio-player">
                 <audio controls aria-label="Audio player for Song"> 
                     <source src="song.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="card-contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email or social media!</p>
-        <div>
-            <a href="https://www.facebook.com/iambiabnca/" target="_blank">Facebook</a> |
-            <a href="https://www.instagram.com/iambiabnca/" target="_blank">Instagram</a>
-        </div>
-    </section>
+        <section id="random-image">
+            <h2>Random Image </h2>
+            <div class="image-container">
+                <img id="baby-image" src="" alt="Random Image" style="width:100%; height:auto; border-radius:8px;" />
+            </div>
+        </section>
 
-</main>
-<center>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out via email or social media!</p>
+            <div>
+                <a href="https://www.facebook.com/iambiabnca/" target="_blank" class="social-link">Facebook</a> |
+                <a href="https://www.instagram.com/iambiabnca/" target="_blank" class="social-link">Instagram</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; Bianca Noreene Calza Otara 2024</p>
     </footer>
-</center>
-    
 
     <script>
         const toggleBtn = document.getElementById("toggleBtn");
@@ -77,6 +85,37 @@
             isDarkMode = !isDarkMode;
             toggleBtn.textContent = isDarkMode ? "☾" : "☀︎";
         });
+
+        function fetchQuoteOfTheDay() {
+            fetch('https://api.quotable.io/random')
+                .then(response => response.json())
+                .then(data => {
+                    const quote = data.content || "No quote available.";
+                    const author = data.author || "Unknown";
+                    document.getElementById("quote-text").textContent = `"${quote}" - ${author}`;
+                })
+                .catch(error => {
+                    console.error("Error fetching quote:", error);
+                    document.getElementById("quote-text").textContent = "Failed to load quote.";
+                });
+        }
+
+        function fetchRandomBabyImage() {
+            fetch('https://randomuser.me/api/?nat=us&inc=picture')
+                .then(response => response.json())
+                .then(data => {
+                    const babyImage = data.results[0].picture.large;
+                    document.getElementById("baby-image").src = babyImage;
+                })
+                .catch(error => {
+                    console.error("Error fetching random baby image:", error);
+                });
+        }
+
+        window.onload = () => {
+            fetchQuoteOfTheDay();
+            fetchRandomBabyImage();
+        };
     </script>
 </body>
 </html>
